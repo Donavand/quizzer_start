@@ -20,7 +20,7 @@ const QUIZZES = sample.map(
       })
     ),
   })
-);
+); //testing//
 
 describe("Quizzer Tests", () => {
   beforeEach(() => {
@@ -58,7 +58,7 @@ describe("Quizzer Tests", () => {
       screen.queryByText("What is 2+2?", { exact: false })
     ).toBeInTheDocument();
     for (let i = 0; i < QUIZZES[1].questionList.length; i++) {
-      if (QUIZZES[1].questionList[i].published == true) {
+      if (QUIZZES[1].questionList[i].published === true) {
         expect(
           screen.queryByText(QUIZZES[1].questionList[i].body, {
             exact: false,
